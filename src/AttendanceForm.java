@@ -16,7 +16,7 @@ public class AttendanceForm {
     public AttendanceForm(){
         submitButton.addActionListener(new SubmitButtonClicked());
         members = new ArrayList<Member>();
-        memberListReader = new MemberListReader("buildTeam.csv");
+        memberListReader = new MemberListReader("D:\\Documents\\IntellijProjects\\attendanceSystem\\buildTeam.csv");
         memberNames = memberListReader.getNames();
     }
 
@@ -38,6 +38,11 @@ public class AttendanceForm {
             if(fName.equalsIgnoreCase("end")&&lName.equalsIgnoreCase("end")){
                 memberListReader.saveMembers(members);
                 status.setText("Saved");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException ie){
+                    ie.printStackTrace();
+                }
                 System.exit(0);
             }
             if (memberListReader.findName(memberNames, fName, lName)){
@@ -46,8 +51,14 @@ public class AttendanceForm {
                         members.get(i).signOut();
                         System.out.println("Signing out "+fName+" "+lName);
                         status.setText("Signed Out");
+                        try {
+                            Thread.sleep(3000);
+                        } catch (InterruptedException ie){
+                            ie.printStackTrace();
+                        }
                         firstNameTextField.setText("First Name");
                         lastNameTextField.setText("Last Name");
+                        status.setText("Enter Name");
                         break;
                     }
                 }
@@ -56,8 +67,14 @@ public class AttendanceForm {
                 System.out.println("Adding "+fName+" "+lName);
                 members.add(new Member(fName, lName));
                 status.setText("Success!");
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException ie){
+                    ie.printStackTrace();
+                }
                 firstNameTextField.setText("First Name");
                 lastNameTextField.setText("Last Name");
+                status.setText("Enter Name");
             }
             else {
                 status.setText("Error: Name not found! Please contact Pranav");
