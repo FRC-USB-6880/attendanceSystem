@@ -56,7 +56,7 @@ public class MemberListReader {
 
     public void saveMembers(ArrayList<Member> members){
         try {
-            File file = new File("attendance\\attendance"+calendar.get(Calendar.MONTH)+"-"+calendar.get(Calendar.DATE)+"-"+calendar.get(Calendar.YEAR)+".csv");
+            File file = new File("C:\\Users\\pb8xe\\IdeaProjects\\attendanceSystem\\src\\attendance\\attendance"+calendar.get(Calendar.MONTH)+"-"+calendar.get(Calendar.DATE)+"-"+calendar.get(Calendar.YEAR)+".csv");
             attendanceWriter = new BufferedWriter(new FileWriter(file));
             for (Member m : members) {
                 String line = m.getSaveOutput();

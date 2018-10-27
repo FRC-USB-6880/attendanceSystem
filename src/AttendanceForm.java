@@ -16,7 +16,7 @@ public class AttendanceForm {
     public AttendanceForm(){
         submitButton.addActionListener(new SubmitButtonClicked());
         members = new ArrayList<Member>();
-        memberListReader = new MemberListReader("D:\\Documents\\IntellijProjects\\attendanceSystem\\buildTeam.csv");
+        memberListReader = new MemberListReader("C:\\Users\\pb8xe\\IdeaProjects\\attendanceSystem\\programmingTeam.csv");
         memberNames = memberListReader.getNames();
     }
 
