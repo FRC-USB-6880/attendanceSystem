@@ -27,7 +27,7 @@ public class Member {
         return difference;
     }
 
-    private long difference;
+    private long difference=0;
 
 
     public Member(String fName, String lName){
@@ -51,7 +51,7 @@ public class Member {
     }
 
     public String getSaveOutput(){
-        String line = fName + "," + lName + "," + formalInTime[0]+":"+formalInTime[1]+":"+formalInTime[2] + "," + formalOutTime[0]+":"+formalOutTime[1]+":"+formalOutTime[2] + "," + difference +"\n";
+        String line = fName + "," + lName + "," + formalInTime[0]+":"+formalInTime[1]+":"+formalInTime[2] + "," + ((formalOutTime!=null)?formalOutTime[0]:"N/A")+":"+((formalOutTime!=null)?formalOutTime[1]:"N/A")+":"+((formalOutTime!=null)?formalOutTime[2]:"N/A") + "," + difference +"\n";
         return line;
     }
 }
