@@ -84,8 +84,8 @@ public class MemberListReader {
                 String[] arr = names.get(i).split(",");
                 if (fIndex>=0 && lIndex>=0){
                     arr[2]=""+(Integer.parseInt(arr[2])+1);
-                    long difference = members.get(fIndex).getDifference();
-                    arr[4]=""+(Long.parseLong(arr[4])+difference);
+                    int difference = members.get(fIndex).getDifference();
+                    arr[4]=""+(Integer.parseInt(arr[4])+difference);
                 }
                 else {
                     arr[3]=""+(Integer.parseInt(arr[3])+1);

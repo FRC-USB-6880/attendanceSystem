@@ -23,11 +23,11 @@ public class Member {
     private int[] formalInTime;
     private int[] formalOutTime;
 
-    public long getDifference() {
+    public int getDifference() {
         return difference;
     }
 
-    private long difference=0;
+    private int difference=0;
 
 
     public Member(String fName, String lName){
@@ -46,7 +46,7 @@ public class Member {
         Calendar calendar = new GregorianCalendar();
         formalOutTime = new int[]{calendar.get(Calendar.HOUR), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND)};
         fullOutTime = calendar.getTimeInMillis();
-        difference = (fullOutTime-fullInTime)/60000;
+        difference = (int)((fullOutTime-fullInTime)/60000);
         System.out.println(fullOutTime);
     }
 

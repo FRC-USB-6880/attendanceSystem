@@ -10,14 +10,14 @@ public class AttendanceForm {
     private JPanel formField;
     private JLabel status;
     private ArrayList<Member> members;
-    private ArrayList<String> memberNames;
+    private ArrayList<String> names;
     private MemberListReader memberListReader;
 
     public AttendanceForm(){
         submitButton.addActionListener(new SubmitButtonClicked());
         members = new ArrayList<Member>();
         memberListReader = new MemberListReader("C:\\Users\\pb8xe\\IdeaProjects\\attendanceSystem\\buildTeam.csv");
-        memberNames = memberListReader.getNames();
+        names = memberListReader.getNames();
     }
 
     private class SubmitButtonClicked implements ActionListener{
@@ -39,7 +39,7 @@ public class AttendanceForm {
                 memberListReader.saveMembers(members);
                 status.setText("Saved");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException ie){
                     ie.printStackTrace();
                 }
@@ -52,28 +52,24 @@ public class AttendanceForm {
                         System.out.println("Signing out "+fName+" "+lName);
                         status.setText("Signed Out");
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(500);
                         } catch (InterruptedException ie){
                             ie.printStackTrace();
                         }
-                        firstNameTextField.setText("First Name");
-                        lastNameTextField.setText("Last Name");
                         status.setText("Enter Name");
                         break;
                     }
                 }
             }
-            else if(memberListReader.findName(memberListReader.getNames(), fName, lName)) {
+            else if(memberListReader.findName(names, fName, lName)) {
                 System.out.println("Adding "+fName+" "+lName);
                 members.add(new Member(fName, lName));
                 status.setText("Success!");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException ie){
                     ie.printStackTrace();
                 }
-                firstNameTextField.setText("First Name");
-                lastNameTextField.setText("Last Name");
                 status.setText("Enter Name");
             }
             else {
