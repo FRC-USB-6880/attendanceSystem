@@ -1,3 +1,6 @@
+package com.frcusb6880.attendance;
+
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -8,6 +11,7 @@ public class MemberListReader {
     private BufferedWriter attendanceWriter;
     private File rosterFile;
     private Calendar calendar;
+    private String dir = "";
 
     public ArrayList<String> getNames() {
         return names;
@@ -15,20 +19,22 @@ public class MemberListReader {
 
     private ArrayList<String> names;
 
-    public MemberListReader(String filename){
+    public MemberListReader(String dir, String filename, JLabel label){
         calendar = new GregorianCalendar();
-        rosterFile = new File(filename);
+        this.dir = dir;
+        File rosterFile = new File(dir+filename);
         names = new ArrayList<String>();
         try {
             reader = new BufferedReader(new FileReader(rosterFile));
             String line = reader.readLine();
-            line = reader.readLine();
             while(line != null){
                 names.add(line);
                 line = reader.readLine();
             }
             reader.close();
+            label.setText("Success!");
         } catch (Exception e) {
+            label.setText("File "+dir+filename+" not found");
             e.printStackTrace();
         }
     }
@@ -56,7 +62,7 @@ public class MemberListReader {
 
     public void saveMembers(ArrayList<Member> members){
         try {
-            File file = new File("C:\\Users\\pb8xe\\IdeaProjects\\attendanceSystem\\src\\attendance\\attendance"+calendar.get(Calendar.MONTH)+"-"+calendar.get(Calendar.DATE)+"-"+calendar.get(Calendar.YEAR)+".csv");
+            File file = new File(dir+"attendance"+calendar.get(Calendar.MONTH)+"-"+(calendar.get(Calendar.DATE)+1)+"-"+calendar.get(Calendar.YEAR)+".csv");
             attendanceWriter = new BufferedWriter(new FileWriter(file));
             for (Member m : members) {
                 String line = m.getSaveOutput();
@@ -101,6 +107,18 @@ public class MemberListReader {
             rosterWriter.close();
 
         } catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void addName(Member member){
+        try {
+            BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile, true));
+            rosterWriter.write(member.getfName()+","+member.getlName()+","+0+","+0+","+0+"\n");
+            rosterWriter.flush();
+            rosterWriter.close();
+        } catch (IOException e){
             e.printStackTrace();
         }
 

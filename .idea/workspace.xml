@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="FRCAttendancePortal:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a4260360-8b68-4a16-9adf-60778a2caec6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/teamSpiritOutreachTeam.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildTeam.csv" beforeDir="false" afterPath="$PROJECT_DIR$/buildTeam.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FRCAttendancePortal/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/MemberListReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FRCAttendancePortal/MemberListReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AttendanceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AttendanceForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MemberListReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MemberListReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamSpiritTeam.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildTeam.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/AttendanceForm$SubmitButtonClicked.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/AttendanceForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FRCAttendancePortal/MemberListReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outreachTeam.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/programmingTeam.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AttendanceForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AttendanceForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MemberListReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/attendance/attendance9-31-2018.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamSpiritOutreachTeam.csv" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,36 +87,40 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="438" />
-          <entry key="java" value="276" />
-          <entry key="txt" value="17" />
+          <entry key="java" value="2322" />
+          <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="276" />
-          <entry key="PLAIN_TEXT" value="455" />
+          <entry key="JAVA" value="2322" />
+          <entry key="PLAIN_TEXT" value="469" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="5" />
+          <entry key="csv" value="10" />
+          <entry key="form" value="2" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="GUI_DESIGNER_FORM" value="2" />
+          <entry key="JAVA" value="2" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AttendanceForm.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+            <state relative-caret-position="-1326">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,35 +129,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teamSpiritOutreachTeam.csv">
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="170">
+              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/outreachTeam.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildTeam.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/attendance/attendance10-7-2018.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -148,38 +168,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MemberListReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Member.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#323#324#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AttendanceForm.form">
+        <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
@@ -201,17 +205,26 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/programmingTeam.csv" />
         <option value="$PROJECT_DIR$/src/AttendanceForm.form" />
-        <option value="$PROJECT_DIR$/src/MemberListReader.java" />
         <option value="$PROJECT_DIR$/src/Member.java" />
         <option value="$PROJECT_DIR$/teamSpiritOutreachTeam.csv" />
         <option value="$PROJECT_DIR$/buildTeam.csv" />
+        <option value="$PROJECT_DIR$/src/ConfirmName.java" />
+        <option value="$PROJECT_DIR$/src/ConfirmName.form" />
+        <option value="$PROJECT_DIR$/test.csv" />
+        <option value="$PROJECT_DIR$/src/RosterFileFinder.form" />
+        <option value="$PROJECT_DIR$/src/RosterFileFinder.java" />
+        <option value="$PROJECT_DIR$/src/MemberListReader.java" />
         <option value="$PROJECT_DIR$/src/AttendanceForm.java" />
+        <option value="$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java" />
+        <option value="$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.java" />
+        <option value="$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1905" />
-    <option name="width" value="1950" />
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="1948" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -230,13 +243,25 @@
             <path>
               <item name="attendanceSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="attendanceSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="attendanceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="attendanceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="attendanceSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="attendanceSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="FRCAttendancePortal_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="attendanceSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="attendanceSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="attendance" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,11 +272,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541647237921" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541801552499" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pb8xe\IdeaProjects\attendanceSystem\src\com\frcusb6880\attendance" />
+      <recent name="C:\Users\pb8xe\IdeaProjects\attendanceSystem" />
       <recent name="D:\Documents\IntellijProjects\attendanceSystem" />
     </key>
   </component>
@@ -269,7 +299,7 @@
   </component>
   <component name="RunManager">
     <configuration name="AttendanceForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AttendanceForm" />
+      <option name="MAIN_CLASS_NAME" value="com.frcusb6880.attendance.AttendanceForm" />
       <module name="FRCAttendancePortal" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -299,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540683507297</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed rosters">
+      <created>1541647308957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541647308957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -315,7 +352,7 @@
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13346747" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13346747" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -323,8 +360,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,7 +385,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed path issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed path issues" />
+    <MESSAGE value="fixed rosters" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed rosters" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/FRCAttendancePortal.iml">
@@ -360,16 +398,6 @@
           <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AttendanceForm.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/attendance/attendance10-6-2018.csv">
       <provider selected="true" editor-type-id="text-editor" />
@@ -388,10 +416,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Member.java">
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#173#174#0" expanded="true" />
@@ -414,25 +442,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MemberListReader.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="83" column="37" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/ConfirmName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attendance10-8-2018.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/RosterFileFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AttendanceForm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+        <state relative-caret-position="-1326">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>FRCAttendancePortal:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FRCAttendancePortal</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
