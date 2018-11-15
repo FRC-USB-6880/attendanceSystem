@@ -72,11 +72,6 @@ public class AttendanceForm {
         if(fName.equalsIgnoreCase("end")&&lName.equalsIgnoreCase("end")){
             memberListReader.saveMembers(members);
             status.setText("Saved");
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException ie){
-                ie.printStackTrace();
-            }
             System.exit(0);
         }
         if (memberListReader.findName(memberNames, fName, lName)){
@@ -85,11 +80,6 @@ public class AttendanceForm {
                     members.get(i).signOut();
                     System.out.println("Signing out "+fName+" "+lName);
                     status.setText("Signed Out");
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException ie){
-                        ie.printStackTrace();
-                    }
                     status.setText("Enter Name");
                     firstNameTextField.setText("");
                     lastNameTextField.setText("");
@@ -101,11 +91,6 @@ public class AttendanceForm {
             System.out.println("Adding "+fName+" "+lName);
             members.add(new Member(fName, lName));
             status.setText("Success!");
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException ie){
-                ie.printStackTrace();
-            }
             status.setText("Enter Name");
             firstNameTextField.setText("");
             lastNameTextField.setText("");
@@ -115,11 +100,6 @@ public class AttendanceForm {
             dialog.pack();
             dialog.setVisible(true);
             dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e){
-                e.printStackTrace();
-            }
             status.setText("Enter Name");
             firstNameTextField.setText("");
             lastNameTextField.setText("");

@@ -20,7 +20,7 @@ public class ConfirmName extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonOk);
 
-        label.setText(first+" "+last+" not found. Would you like to add to roster?");
+        label.setText("'"+first+" "+last+"'"+" not found. Would you like to add to roster?");
 
         buttonOk.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

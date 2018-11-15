@@ -7,11 +7,9 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class MemberListReader {
-    private BufferedReader reader;
-    private BufferedWriter attendanceWriter;
-    private File rosterFile;
+    private String filePath;
     private Calendar calendar;
-    private String dir = "";
+    private String dir;
 
     public ArrayList<String> getNames() {
         return names;
@@ -22,10 +20,11 @@ public class MemberListReader {
     public MemberListReader(String dir, String filename, JLabel label){
         calendar = new GregorianCalendar();
         this.dir = dir;
-        File rosterFile = new File(dir+filename);
+        filePath = dir+filename;
+        File rosterFile = new File(filePath);
         names = new ArrayList<String>();
         try {
-            reader = new BufferedReader(new FileReader(rosterFile));
+            BufferedReader reader = new BufferedReader(new FileReader(rosterFile));
             String line = reader.readLine();
             while(line != null){
                 names.add(line);
@@ -63,7 +62,7 @@ public class MemberListReader {
     public void saveMembers(ArrayList<Member> members){
         try {
             File file = new File(dir+"attendance"+calendar.get(Calendar.MONTH)+"-"+(calendar.get(Calendar.DATE)+1)+"-"+calendar.get(Calendar.YEAR)+".csv");
-            attendanceWriter = new BufferedWriter(new FileWriter(file));
+            BufferedWriter attendanceWriter = new BufferedWriter(new FileWriter(file));
             for (Member m : members) {
                 String line = m.getSaveOutput();
                 attendanceWriter.write(line);
@@ -91,7 +90,6 @@ public class MemberListReader {
                 if (fIndex>=0 && lIndex>=0){
                     arr[2]=""+(Integer.parseInt(arr[2])+1);
                     int difference = members.get(fIndex).getDifference();
-                    arr[4]=""+(Integer.parseInt(arr[4])+difference);
                 }
                 else {
                     arr[3]=""+(Integer.parseInt(arr[3])+1);
@@ -99,6 +97,7 @@ public class MemberListReader {
                 String line = arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+"\n";
                 names.set(i, line);
             }
+            File rosterFile = new File(filePath);
             BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile));
             for (String n : names){
                 rosterWriter.write(n);
@@ -114,6 +113,7 @@ public class MemberListReader {
 
     public void addName(Member member){
         try {
+            File rosterFile = new File(filePath);
             BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile, true));
             rosterWriter.write(member.getfName()+","+member.getlName()+","+0+","+0+","+0+"\n");
             rosterWriter.flush();
