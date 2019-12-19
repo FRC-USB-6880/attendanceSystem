@@ -20,7 +20,7 @@ public class AttendanceForm {
     public void setDir(String dir, String filename, JLabel label) {
         this.dir = dir;
         this.filename = filename;
-        memberListReader = new MemberListReader(dir, filename, label);
+        memberListReader = new MemberListReader(dir, filename, label, members);
         names = memberListReader.getNames();
     }
 
@@ -74,32 +74,26 @@ public class AttendanceForm {
             status.setText("Saved");
             System.exit(0);
         }
-        if (memberListReader.findName(memberNames, fName, lName)){
-            for (int i=0;i<members.size();i++){
-                if (members.get(i).getfName().equalsIgnoreCase(fName) && members.get(i).getlName().equalsIgnoreCase(lName)){
-                    members.get(i).signOut();
-                    System.out.println("Signing out "+fName+" "+lName);
-                    status.setText("Signed Out");
-                    status.setText("Enter Name");
-                    firstNameTextField.setText("");
-                    lastNameTextField.setText("");
-                    break;
-                }
-            }
-        }
-        else if(memberListReader.findName(names, fName, lName)) {
-            System.out.println("Adding "+fName+" "+lName);
-            members.add(new Member(fName, lName));
-            status.setText("Success!");
-            status.setText("Enter Name");
-            firstNameTextField.setText("");
-            lastNameTextField.setText("");
-        }
-        else {
+        Member member = getMember(fName, lName);
+        if (member == null) {
             ConfirmName dialog = new ConfirmName(this, fName, lName);
             dialog.pack();
             dialog.setVisible(true);
             dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+            status.setText("Enter Name");
+            firstNameTextField.setText("");
+            lastNameTextField.setText("");
+        } else if (member.isSignedIn()){
+            member.signOut();
+            System.out.println("Signing out "+fName+" "+lName);
+            status.setText("Signed Out");
+            status.setText("Enter Name");
+            firstNameTextField.setText("");
+            lastNameTextField.setText("");
+        } else {
+            System.out.println("Signing in "+fName+" "+lName);
+            member.signIn();
+            status.setText("Success!");
             status.setText("Enter Name");
             firstNameTextField.setText("");
             lastNameTextField.setText("");
@@ -108,9 +102,8 @@ public class AttendanceForm {
 
     public void addName(String first, String last){
         Member m = new Member(first, last);
-        members.add(m);
-        memberListReader.addName(m);
-        System.out.println("Added "+first+" "+last+" to roster");
+        m.signIn();
+        System.out.println("Added "+first+" "+last+" to roster and signed in");
         status.setText("Success!");
     }
 
@@ -120,5 +113,14 @@ public class AttendanceForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private Member getMember(String fName, String lName) {
+        for (int i = 0; i < members.size(); i++) {
+            if (members.get(i).getfName().equalsIgnoreCase(fName) && members.get(i).getlName().equalsIgnoreCase(lName)) {
+                return members.get(i);
+            }
+        }
+        return null;
     }
 }

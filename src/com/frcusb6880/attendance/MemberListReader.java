@@ -17,7 +17,7 @@ public class MemberListReader {
 
     private ArrayList<String> names;
 
-    public MemberListReader(String dir, String filename, JLabel label){
+    public MemberListReader(String dir, String filename, JLabel label, ArrayList<Member> members){
         calendar = new GregorianCalendar();
         this.dir = dir;
         filePath = dir+filename;
@@ -29,6 +29,15 @@ public class MemberListReader {
             while(line != null){
                 names.add(line);
                 line = reader.readLine();
+
+                String[] cols = line.split(",");
+                Member member = new Member(cols[0], cols[1]);
+                if (cols.length > 2) {
+                    for (int i = 2; i < cols.length; i++){
+                        member.addPrevTime(cols[i]);
+                    }
+                }
+                members.add(member);
             }
             reader.close();
             label.setText("Success!");
@@ -38,87 +47,29 @@ public class MemberListReader {
         }
     }
 
-    public boolean findName(ArrayList<String> arr, String f, String l){
-        String[] fNamesArr = new String[arr.size()];
-        String[] lNamesArr = new String[arr.size()];
-        for(int i=0;i<fNamesArr.length;i++){
-            String[] temp = arr.get(i).split(",");
-            fNamesArr[i] = temp[0];
-            lNamesArr[i] = temp[1];
-        }
-//        int fIndex = binarySearch(fNamesArr, 0, fNamesArr.length-1, f);
-//        int lIndex = binarySearch(lNamesArr, 0, lNamesArr.length-1, l);
-        int fIndex = nameSearch(fNamesArr, f);
-        int lIndex = nameSearch(lNamesArr, l);
-
-        if(fIndex<0 || lIndex<0){
-            System.out.println(f+" "+l+" not found");
-            return false;
-        }
-        System.out.println(f+" "+l+" found");
-        return true;
-    }
-
     public void saveMembers(ArrayList<Member> members){
+        members = Member.sortMembersLname(members);
         try {
-            File file = new File(dir+"attendance"+calendar.get(Calendar.MONTH)+"-"+(calendar.get(Calendar.DATE)+1)+"-"+calendar.get(Calendar.YEAR)+".csv");
-            BufferedWriter attendanceWriter = new BufferedWriter(new FileWriter(file));
+            File meetingFile = new File(dir+"attendance"+calendar.get(Calendar.MONTH)+"-"+(calendar.get(Calendar.DATE)+1)+"-"+calendar.get(Calendar.YEAR)+".csv");
+            BufferedWriter attendanceWriter = new BufferedWriter(new FileWriter(meetingFile));
+
+            File rosterFile = new File(filePath);
+            BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile));
+
             for (Member m : members) {
-                String line = m.getSaveOutput();
-                attendanceWriter.write(line);
+                String meetingOutput = m.getMeetingSaveOutput();
+                attendanceWriter.write(meetingOutput);
+
+                String rosterOutput = m.getRosterSaveOutput();
+                rosterWriter.write(rosterOutput);
             }
             attendanceWriter.flush();
             attendanceWriter.close();
 
-            String[] fMembersArr = new String[members.size()];
-            String[] lMembersArr = new String[members.size()];
-            for(int i=0;i<fMembersArr.length;i++){
-                fMembersArr[i] = members.get(i).getfName();
-                lMembersArr[i] = members.get(i).getlName();
-            }
-            String[] fNamesArr = new String[names.size()];
-            String[] lNamesArr = new String[names.size()];
-            for(int i=0;i<fNamesArr.length;i++){
-                String[] temp = names.get(i).split(",");
-                fNamesArr[i] = temp[0];
-                lNamesArr[i] = temp[1];
-            }
-            for (int i=0;i<fNamesArr.length;i++){
-                int fIndex = nameSearch(fMembersArr, fNamesArr[i]);
-                int lIndex = nameSearch(lMembersArr, lNamesArr[i]);
-                String[] arr = names.get(i).split(",");
-                if (fIndex>=0 && lIndex>=0){
-                    arr[2]=""+(Integer.parseInt(arr[2])+1);
-                    int difference = members.get(fIndex).getDifference();
-                }
-                else {
-                    arr[3]=""+(Integer.parseInt(arr[3])+1);
-                }
-                String line = arr[0]+","+arr[1]+","+arr[2]+","+arr[3]+"\n";
-                names.set(i, line);
-            }
-            File rosterFile = new File(filePath);
-            BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile));
-            for (String n : names){
-                rosterWriter.write(n);
-            }
             rosterWriter.flush();
             rosterWriter.close();
 
         } catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
-
-    public void addName(Member member){
-        try {
-            File rosterFile = new File(filePath);
-            BufferedWriter rosterWriter = new BufferedWriter(new FileWriter(rosterFile, true));
-            rosterWriter.write(member.getfName()+","+member.getlName()+","+0+","+0+","+0+"\n");
-            rosterWriter.flush();
-            rosterWriter.close();
-        } catch (IOException e){
             e.printStackTrace();
         }
 
