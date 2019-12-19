@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4260360-8b68-4a16-9adf-60778a2caec6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/AttendanceForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frcusb6880/attendance/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/frcusb6880/attendance/MemberListReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1539966417584</updated>
       <workItem from="1567540129494" duration="64000" />
-      <workItem from="1576714724920" duration="3077000" />
+      <workItem from="1576714724920" duration="3588000" />
     </task>
     <task id="LOCAL-00001" summary="fixed path issues">
       <created>1540683507297</created>
